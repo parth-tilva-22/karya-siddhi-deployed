@@ -1,0 +1,20 @@
+.sidebar{
+    height: 100%;
+    width: 100%;
+    background-color: #044d66;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+
+.sidebar div:last-child{
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.my-task, .home, .help{
+        padding: 10px 10px;
+        font-size: 25px;
+        color: white;
+}

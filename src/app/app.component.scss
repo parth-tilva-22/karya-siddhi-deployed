@@ -1,0 +1,20 @@
+.approot{
+    font-family: 'Inter', sans-serif;
+}
+
+.header{
+    height: 60px;
+    width: 100%;
+}
+
+.sidebar{
+    display: inline-block;
+    height: calc(100vh - 60px);
+    width: 200px;
+}
+
+.home{
+    float: right;
+    height: calc(100vh - 60px);
+    width: calc(100% - 200px);
+}
