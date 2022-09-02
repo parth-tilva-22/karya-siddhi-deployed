@@ -1,10 +1,21 @@
 <div class="home">
     <p class="home-title">Dashboard</p>
-    <div class="date">Thrusday, 24 aug 2022</div>
-    <div class="greeting">Good morning, Sushil</div>
+    <div class="date">{{date | date:'fullDate'}}</div>
+    <div class="greeting">{{greetingMsg()}} Sushil</div>
     <div class="task-info">
-        <div class="filter">This week</div>
-        <div class="task-completed">5 Tasks completed</div>
+        <div class="filter">
+            <!-- <label for="cars">Choose a car:</label> -->
+            <select class="time-filter" style="border:none" name="time-filter">
+                <option class="time-filter" value="This week">This week</option>
+                <option class="time-filter" value="This month">This month</option>
+                <option class="time-filter" value="This year">This year</option>
+                <option class="time-filter" value="Tomorrow">Tomorrow</option>
+              </select>
+            </div>
+        <div class="task-completed">
+            <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+            <i class="fa-solid fa-circle-check"></i>
+            5 Tasks completed</div>  
         <div class="task-assigned">15 Tasks assigned</div>
     </div>
     <div class="copyright">

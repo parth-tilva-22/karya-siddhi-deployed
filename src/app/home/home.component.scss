@@ -2,6 +2,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .copyright{
@@ -15,8 +16,60 @@
 
 .home-title{
     padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .date{
     text-align: center;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.greeting{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.check-icon{
+    color: rgb(131, 218, 0);
+    font-size: 20px;
+    padding: 2px;
+}
+
+.task-info{
+    margin:  30px;
+    display: inline;
+    display: flex;
+    align-items: stretch;
+    font-size: large;
+    font-weight: 500;
+    // background-color: antiquewhite;
+}
+
+.filter{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.time-filter{
+    font-size: large;
+    font-weight: 500;
+}
+
+.task-completed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.task-assigned{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-grow: 1;
 }

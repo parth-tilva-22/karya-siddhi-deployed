@@ -1,5 +1,6 @@
 .approot{
     font-family: 'Inter', sans-serif;
+    height: 100vh;
 }
 
 .header{
@@ -7,14 +8,7 @@
     width: 100%;
 }
 
-.sidebar{
-    display: inline-block;
+.content{
     height: calc(100vh - 60px);
-    width: 200px;
 }
 
-.home{
-    float: right;
-    height: calc(100vh - 60px);
-    width: calc(100% - 200px);
-}
