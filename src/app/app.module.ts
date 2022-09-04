@@ -8,6 +8,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContentComponent } from './content/content.page';
 import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TaskListComponent } from './task-list/task-list.component';
+import { TaskItemComponent } from './task-item/task-item.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SidebarComponent,
     ContentComponent,
     HomeComponent,
+    TaskListComponent,
+    TaskItemComponent
   ],
   imports: [
     BrowserModule,
