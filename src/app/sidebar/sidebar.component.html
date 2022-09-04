@@ -1,9 +1,10 @@
 <div class="sidebar" > 
-    <div class="home">
+    <div class="home" routerLink="/home">
         <fa-icon class="home" [icon]="faHome"></fa-icon>
         <span class="icon-text">Home</span>
     </div>
-    <div class="my-task">
+    <div class="my-task" class="home" routerLink="/myTasks">
+
         <fa-icon class="my-task" [icon]="faListCheck"></fa-icon>
         <span class="icon-text">My Tasks</span>
     </div>

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskItemComponent } from './task-item/task-item.component';
+import { MyTasksComponent } from './my-tasks/my-tasks.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { TaskItemComponent } from './task-item/task-item.component';
     ContentComponent,
     HomeComponent,
     TaskListComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    MyTasksComponent
   ],
   imports: [
     BrowserModule,
