@@ -1,4 +1,4 @@
-.home{
+.home {
     height: 100%;
     width: 100%;
     position: relative;
@@ -6,12 +6,12 @@
     // background-color: burlywood;
 }
 
-.dashboard{
+.dashboard {
     height: 220px;
     // background-color: aquamarine;
 }
 
-.copyright{
+.copyright {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -21,32 +21,32 @@
     border: 2px solid #275187;
 }
 
-.home-title{
+.home-title {
     padding: 20px;
     font-size: 20px;
     font-weight: 500;
 }
 
-.date{
+.date {
     text-align: center;
     font-weight: 500;
     margin: 10px;
 }
 
-.greeting{
+.greeting {
     text-align: center;
     font-size: 30px;
     font-weight: 500;
 }
 
-.check-icon{
+.check-icon {
     color: rgb(131, 218, 0);
     font-size: 20px;
     padding: 2px;
 }
 
-.task-info{
-    margin:  30px;
+.task-info {
+    margin: 20px;
     display: inline;
     display: flex;
     align-items: stretch;
@@ -55,38 +55,38 @@
     // background-color: antiquewhite;
 }
 
-.filter{
+.filter {
     display: flex;
     justify-content: right;
     align-items: center;
     flex-grow: 1;
 }
 
-.time-filter{
+.time-filter {
     font-size: large;
     font-weight: 500;
 }
 
-.task-completed{
+.task-completed {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
 }
 
-.task-completed span{
+.task-completed span {
     font-size: 25px;
     margin: 3px;
 }
 
-.task-assigned span{
+.task-assigned span {
     font-size: 25px;
     margin: 3px
 }
 
 
 
-.task-assigned{
+.task-assigned {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -94,11 +94,74 @@
 }
 
 
-.task-list-priorities{
+.task-list-priorities {
     // box-sizing: border-box;
     // background-color: antiquewhite;
     // margin: 10px;
     padding: 20px;
     height: calc(100% - 220px);
     // overflow: auto;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .home {
+        height: 100%;
+        width: 100%;
+        position: static;
+    }
+
+    .task-info {
+        // background-color: #275187;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard {
+        height: auto;
+        // padding-bottom: 50px;
+        // background-color: aquamarine;
+    }
+
+    .filter,
+    .task-assigned,
+    .task-completed {
+        padding: 5px 0px;
+    }
+
+
+    .home {
+        height: 100%;
+        // width: 100%;
+        position: relative;
+        overflow: auto;
+        // background-color: burlywood;
+    }
+
+
+    .copyright {
+        position: static;
+        bottom: 0;
+        width: 100%;
+        // text-align: center;
+        // padding: 10px;
+        // background-color: white;
+        // border: 2px solid #275187;
+    }
+
+
+
+
+
+
+    .task-list-priorities {
+        // box-sizing: border-box;
+        // background-color: antiquewhite;
+        padding: 20px;
+        height: auto;
+        // overflow: auto;
+    }
+
 }

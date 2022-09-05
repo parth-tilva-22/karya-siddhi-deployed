@@ -1,7 +1,7 @@
 .check-icon{
     width: 5%;
     height: 30px;
-    /* background-color: aqua; */
+    //  background-color: aqua; 
     text-align: center;
     display: inline-block;
 }
@@ -10,23 +10,24 @@
     /* height: 100px; */
     display: flex;
     align-items: center;
+    // background-color: rgb(85, 153, 153);
     padding: 25px 5px;
 }
 
 #title{
     width: 25%;
-    /* background-color: aquamarine; */
+    //  background-color: aquamarine; 
+    padding-bottom: 20px;
     display: inline-block;
 }
 
 #description{
     width: 40%;
-    /* background-color: bisque; */
+    //  background-color: bisque; 
     display: inline-block;
+    text-align: justify;
     text-align: center;
     padding: 0px 10px;
-
-
 }
 
 .check-icon{
@@ -37,7 +38,7 @@
 
 #due-date{
     width: 20%;
-    /* background-color: blueviolet; */
+    //  background-color: blueviolet; 
     text-align: center;
     display: inline-block;
 }
@@ -46,6 +47,62 @@
     text-align: center;
     width: 10%;
     display: inline-block;
-    /* background-color: chartreuse; */
+    //  background-color: chartreuse; 
     display: inline-block;
+}
+
+@media screen and (max-width: 800px) {
+
+    .check-icon{
+        color: rgb(131, 218, 0);
+        font-size: 20px;
+        padding: 0;
+        width: auto;
+    }
+
+    #task-item{
+        // background-color: rgba(107, 148, 183, 0.479);
+        position: relative;
+        height: auto;
+    }
+
+    #title{
+        position: absolute;
+        top:0;
+        margin-left: 44px;
+        padding-right: 15px;
+        // background-color: rgba(0, 255, 255, 0.395);
+        left:0;
+        width: 67%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    #due-date{
+        position: absolute;
+        width: 20%;
+        //  background-color: rgba(137, 43, 226, 0.444); 
+        text-align: center;
+        top:0;
+        right: 0;
+    }
+
+    .priority{
+        width: 20%;
+        padding-top: 20px;
+        position: absolute;
+        right: 0;
+    }
+
+    #description{
+        width: 70%;
+        margin-left: 20px;
+        margin-right: 0;
+        margin-top: 5px;
+        padding: 0;
+        text-align: justify;
+        // background-color: bisque; 
+        display: inline-block;    
+    }
 }
