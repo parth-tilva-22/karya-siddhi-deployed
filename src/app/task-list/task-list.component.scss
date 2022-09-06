@@ -1,28 +1,9 @@
-.list-title {
-    display: flex;
-    align-items: center;
-    // background-color: bisque;
-    height: 30px;
-}
 
-
-.task-title {
-    font-size: 20px;
-    font-weight: 500;
-    margin-right: 5px;
-}
-
-.add-icon {
-    color: rgb(131, 218, 0);
-    font-size: 25px;
-    margin: 5px;
-}
 
 .task-list-container {
     height: calc(100% - 50px);
     // background-color: aquamarine;
     overflow: auto;
-    // padding-bottom: 65px;
 }
 
 

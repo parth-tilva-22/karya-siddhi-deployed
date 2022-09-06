@@ -1,0 +1,38 @@
+
+<div *ngIf="isOpen" class="new-task">
+
+
+    <!-- new-task -->
+
+    <span>New Task</span>
+
+    <label for="title">Title</label>
+    <br>
+    <input type="text" id="title" name="title">
+
+    <br>
+    <label for="description">description</label>
+    <br>
+    <input type="text" id="description" name="description">
+
+    <br>
+    <label for="priority">priority</label>
+    <br>
+    <select name="priority" id="priority">
+        <option value="high">high</option>
+        <option value="medium">medium</option>
+        <option value="low">low</option>
+      </select>    
+
+
+      <br>
+      <label for="due-date">Due Date</label>
+      <br>
+      <input type="date" id="due-date" name="due-date">
+      <br>
+
+      <button class="form-button" type="button">Save</button>
+      <button class="form-button" type="Close" (click)="closeDialog()">Close</button>
+
+
+</div>

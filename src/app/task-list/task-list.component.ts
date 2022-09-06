@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -60,9 +60,18 @@ export class TaskListComponent implements OnInit {
     priority: 3,
   }   ]
 
+
+  @Output() addTaskEvent = new EventEmitter<string>();
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  addTask(value: string){
+    this.addTaskEvent.emit(value);
   }
 
 }

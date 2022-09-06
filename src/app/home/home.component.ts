@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
@@ -12,10 +12,20 @@ export class HomeComponent implements OnInit {
   hours = this.date.getHours();
   faCircleCheck = faCircleCheck;
 
+  isDialogOpen: boolean = true;
+
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+
+
+
+  addTask(value: string){
+    this.isDialogOpen = !this.isDialogOpen;
+    console.log("addTask called"+this.isDialogOpen+ value);
   }
 
 

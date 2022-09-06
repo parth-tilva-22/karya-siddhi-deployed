@@ -1,0 +1,40 @@
+.new-task{
+    // height: 300px;
+    // width: 400px;
+    height: auto;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 10px 40px 30px 40px;
+    overflow: auto;
+}
+
+.new-task span{
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#priority{
+    width: 50%;
+}
+
+#priority,#title, #description, #due-date{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 30px ;
+    margin-top: 10px;
+    background-color: rgb(142, 175, 204);
+}
+
+.form-button{
+    padding: 10px 30px;
+    margin: 10px;
+    float: right;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+}

@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { MyTasksComponent } from './my-tasks/my-tasks.component';
+import { AddTaskDialogComponent } from './add-task-dialog/add-task-dialog.component';
+import { TaskListHeaderComponent } from './task-list-header/task-list-header.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { MyTasksComponent } from './my-tasks/my-tasks.component';
     HomeComponent,
     TaskListComponent,
     TaskItemComponent,
-    MyTasksComponent
+    MyTasksComponent,
+    AddTaskDialogComponent,
+    TaskListHeaderComponent
   ],
   imports: [
     BrowserModule,
