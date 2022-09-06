@@ -38,8 +38,12 @@
 
     .sidebar{
         flex-direction: row;
-        // justify-content: center;
+        justify-content: center;
         align-items: stretch;
+    }
+
+    .sidebar div:last-child{
+       margin: 0;
     }
 
     .my-task, .home, .help{
@@ -54,6 +58,18 @@
         // background-color: aquamarine;
         // align-items: center;
     }
+
+    // .help{
+    //     background-color: azure;
+    // }
+
+    // .home{
+    //     background-color: cadetblue;
+    // }
+
+    // .my-task{
+    //     background-color: brown;
+    // }
 
     
 

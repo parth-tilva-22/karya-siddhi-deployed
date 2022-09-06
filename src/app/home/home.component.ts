@@ -13,6 +13,10 @@ export class HomeComponent implements OnInit {
   faCircleCheck = faCircleCheck;
 
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 
   greetingMsg():string{
@@ -20,9 +24,5 @@ export class HomeComponent implements OnInit {
     return msg;
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
