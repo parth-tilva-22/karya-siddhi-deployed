@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -9,6 +9,8 @@ import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 export class TaskListComponent implements OnInit {
 
   faCircleCheck = faCirclePlus;
+  @Input() title = "";
+  @Input() description = "";
 
   taskList = [{
     title: "Completed budgeting for FY 2023",
@@ -51,14 +53,7 @@ export class TaskListComponent implements OnInit {
     dueDate: "26th aug 2022",
     isComplete: false,
     priority: 3,
-  },
-  {
-    title: "Completed budgeting for FY 2023",
-    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
-    dueDate: "26th aug 2022",
-    isComplete: false,
-    priority: 3,
-  }   ]
+  }  ]
 
 
   @Output() addTaskEvent = new EventEmitter<string>();

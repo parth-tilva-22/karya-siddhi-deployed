@@ -11,8 +11,9 @@ export class HomeComponent implements OnInit {
   date =  new Date()
   hours = this.date.getHours();
   faCircleCheck = faCircleCheck;
-
-  isDialogOpen: boolean = true;
+  title = "My Priorities";
+  description = "(next 3 days - high priority)"
+  isDialogOpen: boolean = false;
 
 
   constructor() { }

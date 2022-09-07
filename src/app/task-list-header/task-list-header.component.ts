@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -10,6 +10,9 @@ import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 export class TaskListHeaderComponent implements OnInit {
 
   faCirclePlus = faCirclePlus;
+
+  @Input() title = "";
+  @Input() description = "";
 
   @Output() addTaskEvent = new EventEmitter<string>();
 

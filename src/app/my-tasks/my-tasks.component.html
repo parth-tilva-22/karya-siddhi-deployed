@@ -1,1 +1,16 @@
-<p>my-tasks works!</p>
+<div class="my-tasks">
+    <div class="header">My Tasks
+        <select class="completed-filter" style="border:none" name="completed-filter">
+            <option class="completed-filter" value="InComplete Tasks">Incomplete Tasks</option>
+            <option class="completed-filter" value="Completed Tasks">Completed Tasks</option>
+          </select>
+    </div>
+    <div class="add-task-dialog">
+        <app-add-task-dialog [isOpen]="isDialogOpen" (addTaskEvent)="addTask($event)"></app-add-task-dialog>
+    </div>
+    <div class="task-lists-containder">
+        <div class="task-list" *ngFor="let list of taskListsArray">
+            <app-task-list [title]="list.title" [description]="list.description" (addTaskEvent)="addTask($event)"></app-task-list>
+        </div>
+    </div>
+</div>

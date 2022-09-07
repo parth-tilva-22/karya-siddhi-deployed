@@ -7,7 +7,6 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'myTasks', component: MyTasksComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-
 ];
 
 @NgModule({

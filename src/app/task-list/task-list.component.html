@@ -1,5 +1,5 @@
 
-<app-task-list-header (addTaskEvent)="addTask($event)"></app-task-list-header>
+<app-task-list-header [title]="title" [description]="description"  (addTaskEvent)="addTask($event)"></app-task-list-header>
 <div class="task-list-container">
     <div  *ngFor="let task of taskList">
         <app-task-item [tempTask]="task"></app-task-item>

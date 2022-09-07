@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyTasksComponent implements OnInit {
 
+  isDialogOpen: boolean = false;
+  taskListsArray = [{
+    title:"My Priorities",
+    description:"(next 3 days - high priority)"
+  },
+  {
+    title:"Today's tasks",
+    description:""
+    
+  },
+  {
+    title:"Later tasks",
+    description:""
+  }];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  addTask(value: string){
+    this.isDialogOpen = !this.isDialogOpen;
+    console.log("addTask called"+this.isDialogOpen+ value);
   }
 
 }

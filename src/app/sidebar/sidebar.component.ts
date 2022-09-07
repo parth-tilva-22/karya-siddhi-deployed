@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { Router } from '@angular/router';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faListCheck } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
@@ -13,10 +14,22 @@ export class SidebarComponent implements OnInit {
   faHome = faHome;
   faListCheck = faListCheck;
   faQuestionCircle = faQuestionCircle;
+  activePage = "";
+  
 
-  constructor() { }
+
+  
+
+  constructor(private router: Router) {
+    this.onNavClicked()
+  }
 
   ngOnInit(): void {
+  }
+
+  onNavClicked(){
+    this.activePage = this.router.url;
+    console.log(this.router.url);
   }
 
 }

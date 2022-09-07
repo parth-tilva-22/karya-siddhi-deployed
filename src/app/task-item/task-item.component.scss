@@ -2,7 +2,7 @@
     width: 5%;
     height: 30px;
     //  background-color: aqua; 
-    text-align: center;
+    text-align: start;
     display: inline-block;
 }
 
@@ -11,13 +11,13 @@
     display: flex;
     align-items: center;
     // background-color: rgb(85, 153, 153);
-    padding: 25px 5px;
+    padding: 10px 0px;
 }
 
 #title{
     width: 25%;
     //  background-color: aquamarine; 
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
     display: inline-block;
 }
 
@@ -64,6 +64,7 @@
         // background-color: rgba(107, 148, 183, 0.479);
         position: relative;
         height: auto;
+        font-size: 12px;
     }
 
     #title{
