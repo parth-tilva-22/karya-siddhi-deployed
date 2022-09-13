@@ -25,9 +25,9 @@
         <app-add-task-dialog [isOpen]="isDialogOpen" (addTaskEvent)="addTask($event)"></app-add-task-dialog>
     </div>
     <div class="task-list-priorities">
-        <app-task-list [title]="title" [description]="description" (addTaskEvent)="addTask($event)"></app-task-list>
+        <app-task-list [title]="title" [description]="description" [taskList]="taskList"  (addTaskEvent)="addTask($event)"></app-task-list>
     </div>
-    <div class="copyright">
-        <div>©copyright 2022.</div>
+    <div class="footer">
+        <app-footer></app-footer>
     </div>
 </div>

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faListCheck } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,22 +15,28 @@ export class SidebarComponent implements OnInit {
   faHome = faHome;
   faListCheck = faListCheck;
   faQuestionCircle = faQuestionCircle;
-  activePage = "";
+  activePage = "/";
   
 
-
-  
-
-  constructor(private router: Router) {
-    this.onNavClicked()
+  constructor(private router: Router, private location: Location) {
+    window.onpopstate= () => {
+      this.onNavClicked();
+      // alert("back clicked");
+    }
   }
 
   ngOnInit(): void {
+    this.onNavClicked()
   }
 
   onNavClicked(){
-    this.activePage = this.router.url;
-    console.log(this.router.url);
+    if(this.location.path()!=""){
+      this.activePage = this.location.path();
+    }
+    console.log(this.location.path());
+    // console.log(this.router.url);
   }
+
+  
 
 }

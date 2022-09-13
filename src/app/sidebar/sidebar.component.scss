@@ -4,6 +4,8 @@
     background-color: #044d66;
     display: flex;
     flex-direction: column;
+    border: 2px solid #107a9e;
+
 }
 
 
@@ -21,8 +23,8 @@
 
 
 .selectedPage{
-    background-color: rgba(218, 218, 218, 0.24);
-    border: 1px solid black;
+    background-color: rgba(218, 218, 218, 0.378);
+    // border: 1px solid black;
 }
 
 
@@ -33,8 +35,8 @@
     padding: 10px 10px;
 }
 
-.sidebar div:hover{
-    background-color: rgba(218, 218, 218, 0.085);
+.sidebar div:hover {
+    background-color: rgba(218, 218, 218, 0.149);
 }
 
 // .sidebar div:active{

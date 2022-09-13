@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { TaskItemComponent } from './task-item/task-item.component';
 import { MyTasksComponent } from './my-tasks/my-tasks.component';
 import { AddTaskDialogComponent } from './add-task-dialog/add-task-dialog.component';
 import { TaskListHeaderComponent } from './task-list-header/task-list-header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -26,12 +29,14 @@ import { TaskListHeaderComponent } from './task-list-header/task-list-header.com
     TaskItemComponent,
     MyTasksComponent,
     AddTaskDialogComponent,
-    TaskListHeaderComponent
+    TaskListHeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

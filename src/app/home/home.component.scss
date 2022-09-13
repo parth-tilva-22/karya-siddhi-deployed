@@ -4,6 +4,8 @@
     position: relative;
     // overflow: auto;
     // background-color: burlywood;
+    border: 2px solid #107a9e;
+
 }
 
 .dashboard {
@@ -23,21 +25,33 @@
     z-index: 1;
 }
 
-.copyright {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: white;
-    border: 2px solid #275187;
+// .copyright {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     text-align: center;
+//     padding: 10px;
+//     background-color: white;
+//     border: 2px solid #275187;
+// }
+
+.footer{
+    height: 40px;
+    // width: 100%;
 }
 
 .home-title {
-    padding: 20px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 25px;
     font-weight: 500;
 }
+
+// height: 60px;
+// font-weight: 450;
+// // margin: 10px;
+// padding: 10px;
+// // background-color: aquamarine;
+// font-size: 25px;
 
 .date {
     text-align: center;
@@ -111,7 +125,7 @@
     // background-color: antiquewhite;
     // margin: 10px;
     padding: 20px;
-    height: calc(100% - 220px);
+    height: calc(100% - 260px);
     // overflow: auto;
 }
 

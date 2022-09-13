@@ -36,6 +36,13 @@
     padding: 2px;
 }
 
+
+.uncheck-icon{
+    color: rgb(74, 71, 71);
+    font-size: 20px;
+    padding: 2px;
+}
+
 #due-date{
     width: 20%;
     //  background-color: blueviolet; 
@@ -55,6 +62,13 @@
 
     .check-icon{
         color: rgb(131, 218, 0);
+        font-size: 20px;
+        padding: 0;
+        width: auto;
+    }
+
+    .uncheck-icon{
+        color: rgb(74, 71, 71);
         font-size: 20px;
         padding: 0;
         width: auto;

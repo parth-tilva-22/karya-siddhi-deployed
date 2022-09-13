@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Task } from '../models/task';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import { faLongArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,6 +15,8 @@ export class TaskItemComponent implements OnInit {
 
   faCircleCheck = faCircleCheck;
   faLongArrowUp = faLongArrowUp;
+  faLongArrowDown = faLongArrowDown;
+  faLongArrowRIght = faLongArrowRight;
 
 
    @Input() tempTask:Task = {

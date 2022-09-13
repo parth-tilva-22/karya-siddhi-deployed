@@ -3,7 +3,8 @@
     width: 100%;
     // background-color: rgb(226, 224, 222);
     // overflow: auto;
-    padding: 5px;
+    border: 2px solid #107a9e;
+
 }
 
 
@@ -33,17 +34,24 @@
 }
 
 .task-lists-containder{
-    height: calc(100% - 60px) ;
+    height: calc(100% - 100px) ;
     padding: 5px 10px;
+    overflow: auto;
     // background-color: antiquewhite;
     // width: ;
 }
 
 .task-list{
-    height: calc(100% * 0.333);
+    padding: 10px 0px;
+    // height: calc(100% * 0.333);
     // background-color: rgb(188, 129, 51);
-    overflow: auto;
+    // overflow: auto;
     // width: ;
+}
+
+.footer{
+    height: 40px;
+    width: 100%;
 }
 
 

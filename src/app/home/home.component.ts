@@ -1,5 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
+import { TaskService } from '../task.service';
+import { Task } from '../models/task';
 
 @Component({
   selector: 'app-home',
@@ -15,10 +17,56 @@ export class HomeComponent implements OnInit {
   description = "(next 3 days - high priority)"
   isDialogOpen: boolean = false;
 
+  taskList: Task[] = [{
+    title: "Completed budgeting for FY 2023",
+    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
+    dueDate: "26th aug 2022",
+    isComplete: true,
+    priority: 1,
+  },
+  {
+    title: "Completed budgeting for FY 2023",
+    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
+    dueDate: "26th aug 2022",
+    isComplete: false,
+    priority: 2,
+  },
+  {
+    title: "Completed budgeting for FY 2023",
+    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
+    dueDate: "26th aug 2022",
+    isComplete: true,
+    priority: 3,
+  },
+  {
+    title: "Completed budgeting for FY 2023",
+    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
+    dueDate: "26th aug 2022",
+    isComplete: true,
+    priority: 2,
+  },
+  {
+    title: "Completed budgeting for FY 2023",
+    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
+    dueDate: "26th aug 2022",
+    isComplete: false,
+    priority: 1,
+  },
+  {
+    title: "Completed budgeting for FY 2023",
+    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
+    dueDate: "26th aug 2022",
+    isComplete: false,
+    priority: 3,
+  }  ]
 
-  constructor() { }
+
+
+  constructor(private taskServeice: TaskService) { }
 
   ngOnInit(): void {
+    // let xyz = this.taskServeice.getTasks();
+    // console.log(xyz);
   }
   
 
