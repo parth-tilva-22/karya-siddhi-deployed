@@ -16,9 +16,11 @@
         <div class="task-completed">
             <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
             <!-- <i class="fa-solid fa-circle-check"></i> -->
-            <span>5 </span>
+            <span>{{taskCompleted}} </span>
             Tasks completed</div>  
-        <div class="task-assigned"> <span>14 </span> Tasks assigned</div>
+        <div class="task-assigned">
+            <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+             <span>{{taskAssigned}} </span> Tasks assigned</div>
     </div>
     </div>
     <div class="add-task-dialog">

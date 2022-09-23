@@ -1,3 +1,4 @@
+
 .sidebar{
     height: 100%;
     width: 100%;
@@ -11,7 +12,6 @@
 
 .sidebar div:last-child{
     margin-top: auto;
-    // margin-bottom: 5px;
 }
 
 .my-task, .home, .help{
@@ -24,7 +24,6 @@
 
 .selectedPage{
     background-color: rgba(218, 218, 218, 0.378);
-    // border: 1px solid black;
 }
 
 
@@ -39,9 +38,6 @@
     background-color: rgba(218, 218, 218, 0.149);
 }
 
-// .sidebar div:active{
-//     background-color: rgba(218, 218, 218, 0.24);
-// }
 
 
 @media screen and (max-width: 800px) {
@@ -49,7 +45,6 @@
 
     .icon-text{
         width: 100%;
-        // background-color: bisque;
         display: block;
         text-align: center;
     }
@@ -67,7 +62,6 @@
     }
 
     .my-task, .home, .help{
-        // width: 100%;
         height: auto;
         padding: 10px;
         justify-content: center;
@@ -75,22 +69,7 @@
         font-size: 20px;
         margin: 0;
         flex-grow: 1;
-        // align-items: center;
-        // background-color: aquamarine;
     }
-
-    // .help{
-    //     background-color: azure;
-    // }
-
-    // .home{
-    //     background-color: cadetblue;
-    // }
-
-    // .my-task{
-    //     background-color: brown;
-    // }
-
     
 
 }
