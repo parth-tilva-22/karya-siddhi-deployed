@@ -8,17 +8,17 @@
 
     <label for="title">Title</label>
     <br>
-    <input type="text" id="title" [(ngModel)]="title" name="title">
+    <input type="text" id="title" [(ngModel)]="task.title" name="title">
 
     <br>
     <label for="description">description</label>
     <br>
-    <input type="text" id="description" [(ngModel)]="description" name="description">
+    <input type="text" id="description" [(ngModel)]="task.description" name="description">
 
     <br>
     <label for="priority">priority</label>
     <br>
-    <select name="priority" [(ngModel)]="priority" id="priority">
+    <select name="priority" [value]="temp" [(ngModel)]="priority" id="priority">
         <option value="high">high</option>
         <option value="medium">medium</option>
         <option value="low">low</option>
