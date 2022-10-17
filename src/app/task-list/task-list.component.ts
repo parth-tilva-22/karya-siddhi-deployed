@@ -16,11 +16,18 @@ export class TaskListComponent implements OnInit {
 
 
   @Output() addTaskEvent = new EventEmitter<string>();
+  @Output() taskClicked = new EventEmitter<Task>();
+
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  onTaskClicked(task: Task){
+    this.taskClicked.emit(task)
   }
 
 

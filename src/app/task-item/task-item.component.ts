@@ -19,7 +19,7 @@ export class TaskItemComponent implements OnInit {
   faLongArrowRIght = faLongArrowRight;
 
 
-   @Input() tempTask:Task = {
+   @Input() task:Task = {
     title: " ",
     description: "",
     dueDate: "",

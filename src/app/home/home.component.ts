@@ -21,10 +21,16 @@ export class HomeComponent implements OnInit {
   isDialogOpen: boolean = false;
 
   taskList: Task[] = [];
+  taskToEdit: Task = {
+    title: " ",
+    description: "",
+    dueDate: "",
+    isComplete: true,
+    priority: 0,
+  } 
 
 
-  constructor(private taskServeice: TaskService,
-              private remoteTaskService: RemoteTaskService) { }
+  constructor( private remoteTaskService: RemoteTaskService) { }
 
   ngOnInit(): void {
       this.updateUI();
@@ -41,6 +47,11 @@ export class HomeComponent implements OnInit {
     console.log("addTask called"+this.isDialogOpen+ value);
   }
 
+  edit(task: Task){
+    this.isDialogOpen = !this.isDialogOpen;
+    this.taskToEdit = task;
+  }
+
 
   greetingMsg():string{
     let msg = this.hours < 12 ? 'Good Morning' : this.hours < 18 ? 'Good Afternoon' : 'Good Evening';
@@ -54,49 +65,3 @@ export class HomeComponent implements OnInit {
 
 
 
-
-/*
-taskList: Task[] = [{
-    title: "Completed budgeting for FY 2023",
-    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
-    dueDate: "26th aug 2022",
-    isComplete: true,
-    priority: 1,
-  },
-  {
-    title: "Completed budgeting for FY 2023",
-    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
-    dueDate: "26th aug 2022",
-    isComplete: false,
-    priority: 2,
-  },
-  {
-    title: "Completed budgeting for FY 2023",
-    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
-    dueDate: "26th aug 2022",
-    isComplete: true,
-    priority: 3,
-  },
-  {
-    title: "Completed budgeting for FY 2023",
-    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
-    dueDate: "26th aug 2022",
-    isComplete: true,
-    priority: 2,
-  },
-  {
-    title: "Completed budgeting for FY 2023",
-    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
-    dueDate: "26th aug 2022",
-    isComplete: false,
-    priority: 1,
-  },
-  {
-    title: "Completed budgeting for FY 2023",
-    description: "Budgeting for FY 2023 this is required by the finance depeartment. A further longer description is possible.",
-    dueDate: "26th aug 2022",
-    isComplete: false,
-    priority: 3,
-  }  ]
-
-  */

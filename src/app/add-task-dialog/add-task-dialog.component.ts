@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { TaskService } from '../task.service';
 import { Task } from '../models/task';
-
+import { RemoteTaskService } from '../remote-task.service';
 @Component({
   selector: 'app-add-task-dialog',
   templateUrl: './add-task-dialog.component.html',
@@ -10,21 +9,25 @@ import { Task } from '../models/task';
 export class AddTaskDialogComponent implements OnInit {
 
   @Input() isOpen: boolean = true;
+  @Input() task: Task = {
+    title: " ",
+    description: "",
+    dueDate: "",
+    isComplete: true,
+    priority: 0,
+  } 
   @Output() addTaskEvent = new EventEmitter<string>();
+  @Output() taskPostedEvent = new EventEmitter<string>();
 
-
-  title: string = "";
-  description: string = "";
-  priority: number=0;
+  priority: number=2;
+  temp = "high"
   dueDate :Date | undefined;
 
 
-  constructor(private taskService: TaskService) { }
+  constructor(private remoteTaskService: RemoteTaskService) { }
 
   ngOnInit(): void {
   }
-
-
 
   closeDialog() {
     this.addTaskEvent.emit("close");
@@ -33,22 +36,27 @@ export class AddTaskDialogComponent implements OnInit {
   setTask() {
     let priorityNum = 0;
     if(this.priority.toString()== "high"){
-      priorityNum = 1;
+      this.task.priority = 1;
     }else if(this.priority.toString()== "medium"){
-      priorityNum =2;
+      this.priority =2;
 
     }else if(this.priority.toString()== "low"){
-      priorityNum = 3;
+      this.priority = 3;
     }
-    let task:Task = {
-      title: this.title,
-      description: this.description,
+    this.task = {
+      id:"3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      title: this.task.title,
+      description: this.task.description,
       dueDate: (this.dueDate?.toString()==null)? "": this.dueDate?.toString(),
       isComplete: true,
       priority: priorityNum,
     }
-    // console.log(task);
-    this.taskService.setTask(task);
+    this.remoteTaskService.setTask(this.task).subscribe({
+      next: (task) => {
+        console.log(task);
+        this.taskPostedEvent.emit("posted successfully");
+      }
+    });
     this.closeDialog();
   }
 

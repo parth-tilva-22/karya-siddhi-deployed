@@ -1,12 +1,12 @@
 <div id="task-item">
 
-<fa-icon class="check-icon" [class.uncheck-icon]="tempTask.isComplete === false" [icon]="faCircleCheck"></fa-icon>
-<span id="title">{{tempTask.title}}</span>
-<div id="description">{{tempTask.description}}</div>
-<div id="due-date">{{tempTask.dueDate}}</div>
-<fa-icon class="priority" *ngIf="tempTask.priority === 1" [icon]="faLongArrowUp"></fa-icon>
-<fa-icon class="priority" *ngIf="tempTask.priority === 3" [icon]="faLongArrowDown"></fa-icon>
-<fa-icon class="priority" *ngIf="tempTask.priority === 2" [icon]="faLongArrowRIght"></fa-icon>
+<fa-icon class="check-icon" [class.uncheck-icon]="task.isComplete === false" [icon]="faCircleCheck"></fa-icon>
+<span id="title">{{task.title}}</span>
+<div id="description">{{task.description}}</div>
+<div id="due-date">{{task.dueDate}}</div>
+<fa-icon class="priority" *ngIf="task.priority === 1" [icon]="faLongArrowUp"></fa-icon>
+<fa-icon class="priority" *ngIf="task.priority === 3" [icon]="faLongArrowDown"></fa-icon>
+<fa-icon class="priority" *ngIf="task.priority === 2" [icon]="faLongArrowRIght"></fa-icon>
 
 
 </div>

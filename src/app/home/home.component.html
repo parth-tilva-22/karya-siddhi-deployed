@@ -1,33 +1,35 @@
 <div class="home">
-    <div class="dashboard">
-        <p class="home-title">Dashboard</p>
-    <div class="date">{{date | date:'EEEE, d	LLL y'}}</div>
-    <div class="greeting">{{greetingMsg()}}, Sushil</div>
-    <div class="task-info">
-        <div class="filter">
-            <!-- <label for="cars">Choose a car:</label> -->
-            <select class="time-filter" style="border:none" name="time-filter">
-                <option class="time-filter" value="This week">This week</option>
-                <option class="time-filter" value="This month">This month</option>
-                <option class="time-filter" value="This year">This year</option>
-                <option class="time-filter" value="Tomorrow">Tomorrow</option>
-              </select>
-            </div>
-        <div class="task-completed">
-            <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
-            <!-- <i class="fa-solid fa-circle-check"></i> -->
-            <span>{{taskCompleted}} </span>
-            Tasks completed</div>  
-        <div class="task-assigned">
-            <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
-             <span>{{taskAssigned}} </span> Tasks assigned</div>
-    </div>
-    </div>
-    <div class="add-task-dialog">
-        <app-add-task-dialog [isOpen]="isDialogOpen" (addTaskEvent)="addTask($event)"></app-add-task-dialog>
-    </div>
-    <div class="task-list-priorities">
-        <app-task-list [title]="title" [description]="description" [taskList]="taskList"  (addTaskEvent)="addTask($event)"></app-task-list>
+    <div class="content">
+        <div class="dashboard">
+            <p class="home-title">Dashboard</p>
+        <div class="date">{{date | date:'EEEE, d	LLL y'}}</div>
+        <div class="greeting">{{greetingMsg()}}, Sushil</div>
+        <div class="task-info">
+            <div class="filter">
+                <!-- <label for="cars">Choose a car:</label> -->
+                <select class="time-filter" style="border:none" name="time-filter">
+                    <option class="time-filter" value="This week">This week</option>
+                    <option class="time-filter" value="This month">This month</option>
+                    <option class="time-filter" value="This year">This year</option>
+                    <option class="time-filter" value="Tomorrow">Tomorrow</option>
+                  </select>
+                </div>
+            <div class="task-completed">
+                <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+                <!-- <i class="fa-solid fa-circle-check"></i> -->
+                <span>{{taskCompleted}} </span>
+                Tasks completed</div>  
+            <div class="task-assigned">
+                <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+                 <span>{{taskAssigned}} </span> Tasks assigned</div>
+        </div>
+        </div>
+        <div class="add-task-dialog">
+            <app-add-task-dialog [isOpen]="isDialogOpen"  (taskPostedEvent)="updateUI()"   [task]="taskToEdit"   (addTaskEvent)="addTask($event)"></app-add-task-dialog>
+        </div>
+        <div class="task-list-priorities">
+            <app-task-list [title]="title" [description]="description" [taskList]="taskList" (taskClicked)="edit($event)" (addTaskEvent)="addTask($event)"></app-task-list>
+        </div>
     </div>
     <div class="footer">
         <app-footer></app-footer>
